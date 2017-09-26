@@ -1,0 +1,55 @@
+{% extends "website/base.html" %}
+{% load staticfiles%}
+{% block title %}Microsoft{% endblock title %}
+{% block content %}
+<!-- Inicio Container -->
+<div class="container animated fadeIn">
+<div class="row">
+	<br><br>
+	<div class="col-md-6 col-sm-12 col-xs-12 animated fadeInLeft">
+		<img src="{% static '/img/microsoft-logo.png' %}" alt="Microsoft" class="img-responsive">
+	</div>
+	<div class="col-md-6 col-sm-12 col-xs-12 animated fadeInRight">
+		<p><strong>Siscon Microsoft. Equipo de soluciones en licenciamiento de software y Hardware</strong></p>
+		<p>Somos una empresa siempre en constante evolución y adaptándose a las demandas del mercado. El software marca la pauta en el crecimiento y desarrollo de la mano de la tecnología, y para estar siempre a la vanguardia con las nuevas tendencias y exigencias del usuario, ofrecemos la gama completa de productos Microsoft en sus amplias opciones, y también su novedosa y moderna línea de hardware que se posiciona como una de las mejores en su categoría.</p>
+		<p>Las múltiples soluciones de licenciamiento, diferentes aplicaciones corporativas, software de seguridad, y la gran variedad de versiones disponibles para todas ellas, hacen que el portafolio de productos Microsoft sea muy extenso, por lo que podemos ser su asesor para estar seguro de tener la mejor solución y al más adecuado presupuesto.</p>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<h2 class="text-center"><b>Windows 8</b></h2>
+	<div class="col-md-6 animated fadeInLeft"><img src="{% static '/img/productos_microsoft_1.jpg' %}" alt="Windows 8" class="img-responsive img-circle"></div>
+	<div class="col-md-6 animated fadeInRight">
+		<p>Los sistemas operativos de la familia Microsoft que podrá encontrar en <b>SISCON</b> le garantizan la legalidad de su empresa y, además, le garantizamos la mejor solución para sus necesidades, así como implementaciones, migraciones y <em>upgrades</em> de sus sistemas.</p>
+		<ul style="padding-left: 15px;">
+			<li>OEM</li>
+			<li>UPGRADES</li>
+			<li>Software Sistema Operativo Windows 8 (Pro, Kit legalización, Upgrades, OEM)</li>
+		</ul>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<h2 class="text-center"><b>Office / Office 365</b></h2>
+	<div class="col-md-4"><img src="{% static '/img/productos_microsoft_2.jpg' %}" alt="Windows 8" class="img-responsive img-circle"><br>
+		<p>Software Productividad Office 365(Office 365, Personal, Home, Business, Full Package, Licencia, OEM)</p>
+		<ul style="padding-left: 15px;">
+			<li>Standard</li>
+			<li>Home & Student</li>
+			<li>Home & Business</li>
+		</ul>
+	</div>
+	<div class="col-md-4"><img src="{% static '/img/productos_microsoft_3.jpg' %}" alt="Windows 8" class="img-responsive img-circle"><br>
+		<p>Software Productividad Office Home (Student, Business, Full Package, licencia, OEM)</p>
+		<ul style="padding-left: 15px;">
+			<li>Professional</li>
+			<li>Professional Plus</li>
+		</ul>
+	</div>
+	<div class="col-md-4"><img src="{% static '/img/productos_microsoft_4.jpg' %}" alt="Windows 8" class="img-responsive img-circle"><br>
+		<p>Software Productividad Office PRO (Full Package, licencia, OEM)</p>
+	</div>
+</div>
+</div>	
+<!-- Fin Container -->
+{% endblock %}

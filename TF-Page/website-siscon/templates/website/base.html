@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Tyron Fonseca">
+	<meta name="description" itemprop="description" content="Soluciones de hardware, software, políticas de seguridad Informática, cableado estructurado, asesoría e implementación en soluciones de impresión." />
+	<title>{% block title %}{% endblock title %} | Siscon Costa Rica</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	{% load staticfiles %}
+	<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Inicio NavBar -->
+        <div class="center-block text-center">
+            <a href="/proyectos/3"><button class="btn btn-info">Regresar</button></a>
+            <p class="text-muted">Este texto y boton no estan en la version final.</p> 
+        </div>
+	<div class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<a href="/" class="navbar-brand"><img src="{% static 'img/siscon_logo.svg' %}" alt=""></a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+            </button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/siscon">Inicio</a></li>
+					<li><a href="/siscon/quienes-somos">Propuesta de valor</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/siscon/intel">Intel</a></li>
+							<li><a href="/siscon/microsoft">Microsoft</a></li>
+							<li><a href="/siscon/siscon-directo">Siscon Directo</a></li>
+							<li><a href="/siscon/networking">Networking</a></li>
+						</ul>
+					</li>
+					<li><a href="/siscon/enterprise">Enterprise</a></li>
+					<li><a href="/siscon/contacto">Contacto</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- Fin NavBar -->
+
+<div id="wrap">
+  <div id="main" class="clear-top">
+    {% block content %}
+	{% endblock %}
+  </div>
+</div>
+
+
+<!-- Inicio Footer -->
+<div class="navbar navbar-default navbar-static-bottom footer">
+	<div class="container">
+		<p class="navbar-text pull-left">© Copyright {% now "Y" %}. Todos los derechos reservados</p>
+		<a href="/siscon/contacto" class="navbar-text pull-right">Contacto</a>
+		<a href="/siscon/networking" class="navbar-text pull-right">Networking</a>
+		<a href="/siscon/enterprise" class="navbar-text pull-right">Enterprise</a>
+		<a href="/siscon/microsoft" class="navbar-text pull-right">Microsoft</a>
+		<a href="/siscon/intel" class="navbar-text pull-right">Intel</a>
+		<a href="/siscon" class="navbar-text pull-right">SISCON</a>
+		<!-- <a class="navbar-text pull-left" href="https://icons8.com" style="text-align: center;font-size: 10px;color: #ccc;">Icons provided by Icons8</a> -->
+	</div>
+</div>
+<!-- Fin Footer -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "website/base.html" %}
+{% load staticfiles%}
+{% block title %}Inicio{% endblock title %}
+{% block content %}
+{% include "website/includes/carousel_home.html"%}
+<!-- Inicio Container -->
+<div class="container animated fadeIn">
+	
+	<!-- Inicio Row -->
+	<br>
+	<div class="row">
+		<h2 class="text-center">SISCON proveedor de <b>Soluciones Informáticas</b></h2>
+		<br>
+		<div class="col-md-4 animated fadeInLeft">
+			<img class="img-responsive" src="{% static '/img/siscon_logo.svg' %}" alt="" style="width: 100%;max-height:150px;">
+		</div>
+		<div class="col-md-8 animated fadeInRight">
+			<p>Sistemas Convergentes, en adelante <b>SISCON</b>, se ha enfocado en preparar su equipo de profesionales para apoyarle en el dimensionamiento de soluciones de TI que requieran hardware informático, software, seguridad Informática, cableado estructurado, circuito cerrado de televisión CCTV, asesoría e implementación en soluciones de impresión que le brinden inteligencia a su negocio.</p>
+			<p>
+			Además, contamos con licenciamiento y servicios de implementación bajo ambiente <b>Microsoft</b>, <b>VM Ware</b>, <b>Citrix</b>, así como, servicios técnicos y de ingeniería, ya sea por demanda o a través de la modalidad de outsourcing y renting.</p>
+			<p>
+			Somos un integrador y, como tal, representamos las más prestigiosas marcas a nivel de micro computación, servidores, impresión, fuentes de poder ininterrumpidas, comunicaciones, conectividad, seguridad informática , software, que junto a nuestro servicio se convierten en una excelente oportunidad para su desarrollo</p>
+			<br>
+			<br>
+		</div>
+	</div>
+	<!-- Fin Row -->
+</div>	
+<!-- Fin Container -->
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "website/base.html" %}
+{% block title %}Networking{% endblock title %}
+{% load staticfiles%}
+{% block content %}
+<!-- Inicio Container -->
+<div class="container animated fadeIn">
+	<div class="row">
+		<h2 class="text-center"><b>Soluciones de Networking</b></h2>
+		<div class="col-md-12">
+			{% include "website/includes/carousel_network.html"%}
+		<br>
+	
+			<p>SISCON diseña, implementa y brinda soporte en soluciones tecnológicas de nivel empresarial del fabricante líder del mercado, Dell; en soluciones a la medida para grande, mediana y pequeña empresa, para las exigencias de hoy en día.</p>
+		</div>
+		<br>
+	</div>	
+	<div class="row">
+		<div class="col-md-4 animated zoomIn">
+			<img src="{% static '/img/router-icon.png' %}" alt="" class="img-responsive">
+			<p>Dell Networking es reconocido mundialmente como el tercer fabricante más importante de equipos de comunicación del mundo.</p>
+			<p>Alto rendimiento, plataformas versátiles y arquitecturas flexibles para centros de datos de última generación y redes de campus empresariales, son algunos de los requerimientos más comunes en los<br />
+			clientes.</p>
+		</div>
+		<div class="col-md-4 animated zoomIn">
+			<img src="{% static '/img/wire-icon.png' %}" alt="" class="img-responsive">
+			<p>Satisfacer las demandas de las redes virtualizadas actuales con conmutadores resistentes, de alta densidad y con todas las funcionalidades, para pequeñas, medianas y grandes empresas.</p>
+			<p>Implementación de un ecosistema inalámbrico altamente seguro y fácil de administrar para empleados, invitados y usuarios remotos.</p>
+		</div>
+		<div class="col-md-4 animated zoomIn">	
+			<img src="{% static '/img/networki-icon.png' %}" alt="" class="img-responsive">
+			<p>Opciones de implementación rentable y flexible que brinda capacidades integrales de administración, automatización y aprovisionamiento de recursos, es parte de nuestros objetivos.</p>
+		</div>
+	</div>
+</div>
+<br>
+<br>	
+<!-- Fin Container -->
+{% endblock %}

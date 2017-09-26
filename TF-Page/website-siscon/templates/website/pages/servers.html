@@ -1,0 +1,41 @@
+{% extends "website/base.html" %}
+{% load staticfiles%}
+{% block title %}PowerEdge Portfolio Server{% endblock title %}
+{% block content %}
+<!-- Inicio Container -->
+<div class="container animated fadeIn">
+	<div class="row">
+	<div class="col-md-12">
+		<h2 class="text-center"><b>PowerEdge Portfolio Server</b></h2>
+		<p>En Siscon contamos con un completo portafolio de servidores Dell PowerEdge™ de última generación, que operan de manera eficiente y garantizan la continuidad de los negocios, con acceso seguro y confiable a sus recursos críticos, con tecnologías innovadoras.</p>
+		<p>Haga que TI sea el motor del éxito de su empresa. La gama de productos de última generación de la familia PowerEdge™ está diseñada con la perfecta combinación de características y escalabilidad de rendimiento, para manejar cargas de trabajo exigentes en entornos de TI grandes, pequeños y de nivel de oficina.</p>
+		<p>La más reciente generación de servidores Dell PowerEdge™ impulsa el rendimiento de las aplicaciones y entrega una gestión de administración versátil y una eficiencia operativa líder en la industria.</p>
+	</div>
+	</div>
+		
+	
+	<div class="row text-center">
+		<div class="col-sm-3 col-xs-6">
+			<img src="{% static '/img/servers/servidoresTorre.jpg' %}" alt="" class="img-responsive">
+			<h4><b>Servidores de Torre</b></h4>
+			<a href="torre/"><button class="btn btn-info">Ver catalogo</button></a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<img src="{% static '/img/servers/servidoresRack.jpg' %}" alt="" class="img-responsive">
+			<h4><b>Servidores de Rack</b></h4>
+			<a href="rack/"><button class="btn btn-info">Ver catalogo</button></a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<img src="{% static '/img/servers/servidoresBlade.jpg' %}" alt="" class="img-responsive">
+			<h4><b>Servidores Blade</b></h4>
+			<a href="blade/"><button class="btn btn-info">Ver catalogo</button></a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<img src="{% static '/img/servers/infraCompartida.jpg' %}" alt="" class="img-responsive">
+			<h4><b>Infraestructura Compartida</b></h4>
+			<a href="compartida/"><button class="btn btn-info">Ver catalogo</button></a>
+		</div>
+	</div>
+</div>	
+<!-- Fin Container -->
+{% endblock %}

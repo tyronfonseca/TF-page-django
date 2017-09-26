@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Proyectos{% endblock title %}
+{% load staticfiles %}
+{% block content %}
+<script type="text/javascript" src="{% static 'js/delay.js' %}"></script>
+<!-- Trabajos -->
+	<div class="trabajos">   
+            {% for trabajo in trabajos %}
+            <div onclick="" class="col-md-4 col-sm-6 cont animated fadeInUp" id="trabajo{{forloop.counter}}">
+
+                <!-- Retrazar animacion de cada elemento -->
+                <script>delayAnimation({{forloop.counter}});</script>
+
+				<div class="img shadow img-responsive" style="background-image: url('{% static '' %}img/{{trabajo.abreviacion}}-app.jpg');"></div>
+					<div class="overlay">
+						<div class="text">
+							{{trabajo.nombre}}<br>
+							<br>
+				        <a class="btn btn-primary btn-md" href="{{trabajo.id}}">Ver Mas</a>
+			        </div>
+				</div>
+			</div>
+            {% endfor %}
+	</div>
+
+{% endblock %}
+    

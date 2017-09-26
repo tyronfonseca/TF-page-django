@@ -1,0 +1,43 @@
+{% extends "website/base.html" %}
+{% load staticfiles%}
+{% block title %}Propuesta de Valor{% endblock title %}
+{% block content %}
+<!-- Inicio Container -->
+<div class="container">
+<br>
+<br>
+	<div class="row animated fadeInLeft">
+		<h2 class="text-center"><b>Misión</b></h2>
+		<div class="col-md-4 col-sm-4">
+			<img src="{% static '/img/mission.png' %}" alt="Mision" class="img-responsive">
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<p>Proveer soluciones para infraestructura de tecnología de información, que genere rentabilidad sostenible en ambas vías cliente–proveedor, con elevados estándares de calidad y atención del cliente centroamericano.</p>
+		</div>
+	</div>
+	<hr>
+	<div class="row animated fadeInRight">
+		<h2 class="text-center"><b>Visión</b></h2>
+		<div class="col-md-8 col-sm-8">
+			<p>El mercado es dinámico, digital, por lo que nos vemos brindándole soluciones de movilidad, orientación hacia la nube de centros de cómputo virtuales, es decir, nuestras soluciones evolucionan según las necesidades tecnológicas que requieran nuestros clientes.</p>
+		</div>
+		<div class="col-md-4 col-sm-4">
+			<img src="{% static '/img/vision.png' %}" alt="Mision" class="img-responsive">
+		</div>
+	</div>
+	<hr>
+	<div class="row animated fadeInLeft">
+		<h2 class="text-center"><b>Dell PartnerDirect Premier</b></h2>
+		<div class="col-md-4 col-sm-4">
+			<img src="{% static '/img/dell.png' %}" alt="Mision" class="img-responsive">
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<p><b>SISCON</b> es un socio estratégico con la distinción de “Dell PartnerDirect Premier”, fabricante número uno de soluciones empresariales a nivel mundial.</p>
+<p>Contamos con un equipo de asesores de gran experiencia y conocimiento para apoyar a nuestros clientes y prospectos en sus necesidades tecnológicas y funcionales.</p>
+		</div>
+	</div>
+	<br>
+<br>
+</div>	
+<!-- Fin Container -->
+{% endblock %}

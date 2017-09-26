@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Quien Soy{% endblock title %}
+{% block content %}
+{% include "includes/SVG.html" %}
+<!-- Quien -->
+<div class="animated fadeIn" style="padding:16px;">
+    <div class="row">
+	    <div class="quien col-md-8 col-md-offset-2">
+		    <h1>Quien Soy</h1>
+		    <p>{{page_data.home_desc|safe}}</p>
+            <a class="btn btn-primary btn-md" href="/proyectos">Ver proyectos</a>
+	    </div>
+    </div>
+    <br/>
+
+     <hr>
+    <div class="row">
+        <h2>Experiencia</h2>
+        <br/>
+        <div class="col-md-8 col-md-offset-2">
+		    <p>{{page_data.habilidades_desc}}</p>
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <svg class="svg-icon">
+            <use xlink:href="#android" />
+            </svg>
+             <br/>
+            <p>Aplicaciones</p>
+            <ul>
+            {% for app in habilidad_app %}
+                
+                    <li>{{app.nombre}}</li>
+                
+            {% endfor %}
+           </ul>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <svg class="svg-icon">
+            <use xlink:href="#html" />
+            </svg>
+            <br/>
+            <p>Paginas web</p>
+            <ul>
+            {% for web in habilidad_web %}
+               
+                    <li>{{web.nombre}}</li>
+               
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <svg class="svg-icon">
+            <use xlink:href="#coding" />
+            </svg>
+             <br/>
+            <p>Lenguajes/Herramientas</p>
+            <ul>
+            {% for lan in habilidad_lan %}
+
+                    <li>{{lan.nombre}}</li>
+                
+            {% endfor %}
+            </ul>
+        </div>
+    
+    </div>
+</div>
+{% endblock %}

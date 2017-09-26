@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% block title %}{% endblock title %} | TF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="Pagina web del desarrollador Tyron Fonseca">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Tauri" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+     <div class="navbar navbar-default">
+		<div class="container">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+            </button>
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a id="inicio"  href="/">Inicio</a></li>
+					<li><a id="quien"  href="/quien">Quien soy</a></li>
+                    <li><a id="proyectos"  href="/proyectos">Proyectos</a></li>
+				    <li><a id="contacto"  href="/contacto">Contacto</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div class="wrapper" style="padding-bottom:30px;">
+		<div class="container">
+			
+                <div class="text_center">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		console.log("%cAja! Tratando ver donde no se debe, si quieres saber algo del codigo no dudes en preguntarme. -Tyron", "font-size: x-large");
+	</script>
+</body>
+</html>

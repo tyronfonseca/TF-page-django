@@ -1,0 +1,51 @@
+{% extends "website/base.html" %}
+{% load staticfiles%}
+{% block title %}Intel{% endblock title %}
+{% block content %}
+<!-- Inicio Container -->
+<div class="container animated fadeIn">
+<div class="row">
+<br>
+	<h2 class="text-center"><b>Acreditación de Intel Technology Provider GOLD.</b></h2>
+	<br>
+	<div class="col-md-6 animated fadeInLeft">
+		<p>Desde hace mas de 40 años, Intel desarrolla tecnologías que han permitido la evolución de los equipos de cómputo y la revolución de Internet.</p>
+		<p>Intel, líder mundial en innovación de semiconductores, desarrolla tecnologías, productos e iniciativas para integrar adelantos continuamente, a la forma de trabajar y vivir de las personas.</p>
+		<p>Intel ha apoyado proyectos importantes junto a Siscon en soluciones basadas en Intel de hasta 5.000 instalaciones en un solo cliente público, así como centenares de entregas de soluciones en mercados privados de distribución y producción.</p>
+		<p>Desde la introducción del primer microprocesador, en el año 1971, Intel suministra a las industrias de la informática y comunicaciones, microprocesadores, tarjetas madre, servidores y software, entre otros productos.</p>
+		<p>La misión de Intel es la de ser un proveedor prominente en la construcción de la economía de Internet.</p>
+		<p>Intel es una marca registrada de Intel Corporation y sus subsidiarias en los Estados Unidos y en otros países.</p>
+	</div>
+	<div class="col-md-6 animated fadeInRight" style="padding-bottom: 25px;">
+		<img src="{% static '/img/gold.png' %}" alt="Intel Technology Provider GOLD" class="img-responsive">
+	</div>
+	<div class="col-md-6 animated fadeIn">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe src="https://www.youtube.com/embed?listType=playlist&list=PL6ALP9uEtUb_174AhAY1t3EotmU9RH5Fn&autoplay=1&mute=1&loop=1&controls=0&&showinfo=0" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+	</div>
+	</div>
+</div>
+<hr>
+<div class="row">
+<br>	
+	<h2 class="text-center"><b>Historia de Intel</b></h2>
+	<br>
+	<div class="col-md-6 animated fadeInLeft">
+		<img src="{% static '/img/Intel-logo.png' %}" alt="Intel" class="img-responsive">
+	</div>
+	<div class="col-md-6 animated fadeInRight">
+	
+		<p>En 1968, dos científicos, Robert Noyce y Gordon Moore, fundaron Intel con una visión de los productos de memoria de semiconductores.</p>
+		<p>Para 1971, habían introducido el primer microprocesador del mundo. Desde entonces, Intel consolidó un patrimonio de innovación que sigue ampliando el alcance y la promesa de la computación, al tiempo que sigue mejorando la forma de vivir y trabajar de las personas en todo el mundo.</p>
+	</div>
+</div>
+<br>
+<!-- <div class="row">
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe src="https://www.youtube.com/embed?listType=playlist&list=PL6ALP9uEtUb_174AhAY1t3EotmU9RH5Fn&autoplay=1&mute=1&loop=1&controls=0&&showinfo=0" frameborder="0" allowfullscreen width="100%" height="100%" ></iframe>
+	</div>
+</div> -->
+</div>	
+<!-- Fin Container -->
+{% endblock %}
+

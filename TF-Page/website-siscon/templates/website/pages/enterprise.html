@@ -1,0 +1,50 @@
+{% extends "website/base.html" %}
+{% load staticfiles%}
+{% block title %}Enterprise{% endblock title %}
+{% block content %}
+<!-- Inicio Container -->
+<div class="container animated fadeIn">
+	<div class="row">
+		<h2 class="text-center"><b>Soluciones Enterprise</b></h2>
+		<br>
+		<div class="col-md-12">
+			<p>SISCON diseña, implementa y brinda soporte en soluciones tecnológicas de nivel empresarial del fabricante líder del mercado, Dell; en soluciones a la medida para grande, mediana y pequeña empresa, para las exigencias de hoy en día.</p>
+		</div>
+		<div class="col-md-4 col-sm-4 animated zoomIn">
+			<img src="{% static '/img/asesoria-icon.png' %}" alt="Asesoria" class="img-responsive">
+			<h2 class="text-center"><b>Asesoria</b></h2>
+			<p>Toda la experiencia de nuestros expertos en TI, plasmadas en practicas herramientas en linea.</p>
+		</div>
+		<div class="col-md-4 col-sm-4 animated zoomIn">
+			<img src="{% static '/img/server-icon.png' %}" alt="Administracion" class="img-responsive">
+			<h2 class="text-center"><b>Administracion Facil</b></h2>
+			<p>Los nuevos servidores PowerEdge ofrecen implementacion sin intervension, inteligencia integrada y mucho mas.</p>
+		</div>
+		<div class="col-md-4 col-sm-4 animated zoomIn">
+			<img src="{% static '/img/heart-icon.png' %}" alt="Diagnostico" class="img-responsive">
+			<h2 class="text-center"><b>Diagnostico Remoto</b></h2>
+			<p><b>DPACK</b> es un diagnostico remoto y gratuito. Corra un analisis de su infraestructura sin recurrir a gastos.</p>
+		</div>
+	</div>
+	<div class="text-center">
+		<a href="/siscon/contacto"><button class="btn btn-info">Contactar</button></a>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-6 col-sm-6 text-center animated zoomIn">
+			<img src="{% static '/img/server-icon2.png' %}" alt="PowerEdge" class="img-responsive">
+			<h2><b>PowerEdge Portfolio Server</b></h2>
+			<p>En Siscon contamos con un completo portafolio de servidores Dell PowerEdge™ de última generación…</p>
+			<button class="btn btn-info">Leer mas</button>
+		</div>
+		<div class="col-md-6 col-sm-6 text-center animated zoomIn">
+			<img src="{% static '/img/storage-icon.png' %}" alt="Almacenamiento" class="img-responsive">
+			<h2><b>Almacenamiento</b></h2>
+			<p>Soluciones a la medida bajo el análisis real de la infraestructura del cliente…</p>
+			<button class="btn btn-info">Leer mas</button>			
+		</div>
+	</div>
+</div>
+<br>	
+<!-- Fin Container -->
+{% endblock %}

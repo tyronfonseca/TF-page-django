@@ -1,0 +1,148 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Asap', sans-serif;
+}
+/* .navbar{
+	height: 80px;
+}
+.navbar-nav{
+	padding-top: 15px;
+}
+ */
+ body{
+    background-color: #f2f2f2;
+ }
+
+ html, body {
+  height: 100%;
+}
+ .navbar{
+ 	margin-bottom: 0px;
+ }
+.navbar-brand {
+    padding: 0px 0px;
+}
+
+.carousel,.carousel h3{
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.9);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+img.cover{
+  object-fit: cover;
+}
+
+.carousel-indicators li{
+    border-radius: 0;
+    flex: 1 0 auto;
+    width: 30px;
+    height: 3px;
+    background-color: rgba(255,255,255,.5);
+    border: 0px solid rgba(255,255,255,.5);
+}
+.carousel-indicators .active{
+    width: 30px;
+    height: 3px;
+    background-color: rgba(255,255,255,1);
+    border-color: rgba(255,255,255,1);
+}
+
+.dropdown a, .navbar-default .navbar-nav > li > a {
+    -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  text-transform: uppercase;
+}
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.btn-info {
+    background-color: #7ca1d4;
+}
+
+.dropdown.open .dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
+}
+b,strong{
+    color: #7ca1d4;
+}
+
+.form-control,.img-circle,{
+    border: 2px solid #7ca1d4;
+}
+
+.panel-heading {
+    padding: 0;
+}
+
+.panel-default > .panel-heading{
+   background-color: #7ca1d4;
+}
+.panel-title a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.row{
+        padding-bottom: 20px;
+}
+.panel-heading {
+    cursor: pointer;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;/*
+  padding-bottom:150px;  this needs to be bigger than footer height*/
+}
+
+.footer {/* 
+  position: relative;
+  margin-top: -125px;
+  height: 125px;
+  clear:both;
+  padding-top:20px */;
+} 
+
+img[src$=".gif"], img[src$=".png"],, img[src$=".jpg"], img[src$=".jpeg"] {
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+.col-md-6{
+      padding-top: 25px;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}

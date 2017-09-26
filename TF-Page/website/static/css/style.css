@@ -1,0 +1,230 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	color: #fff;
+  font-family: 'Tauri', sans-serif;
+}
+
+
+html, body { 
+      height: 100%; 
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+    background: linear-gradient(90deg, #261132, #3E2F5B);
+    background-size: 400% 400%;
+    -webkit-animation: gradient_anim 20s ease infinite;
+    -moz-animation: gradient_anim 20s ease infinite;
+    -o-animation: gradient_anim 20s ease infinite;
+    animation: gradient_anim 20s ease infinite;
+}
+
+ul.nav{
+	float: right;
+}
+
+
+ul.nav > li a{
+	display: inline-block;
+	margin-left: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	color: #fff;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+ul.nav > li > a:hover{
+	color: #ccc;
+	text-decoration: none;
+    background-color: transparent;
+}
+
+.navbar-default{
+    background-color:transparent;
+    border-color: transparent;
+}
+
+    .navbar-default .navbar-nav > li > a {
+        color: #fff;
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+    }
+.navbar {
+    border: 0px;
+}
+
+.navbar-default .navbar-toggle {
+     border-color: transparent;
+}
+
+.navbar-collapse {
+    border-top: 0px;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.text_center{
+	margin: 0px auto;
+    padding-top: 5%;
+    text-align: center;
+}
+
+h1{
+	font-size: 2.3em;
+}
+
+p{
+	font-size: 1.2em;
+}
+li{
+	font-size: 1.2em;
+}
+
+
+/*Estilo lista*/
+
+.icon{
+	font-size: 1.7em;
+	padding-right: 5px;
+}
+
+.icon p{
+  font-size: .7em;
+  text-decoration: none;
+}
+
+.icon p:hover{
+  text-decoration: none;
+}
+
+.icon i{
+  font-size: 2em;
+}
+
+ul {
+    padding-left: 15px;
+    text-align: left;
+}
+
+
+/*Overlay animation*/
+
+.img{
+	height: 250px;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: block;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.cont:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.col-md-3,.col-md-4,.col-md-6{
+	padding-right: 0px;
+    padding-left: 0px;
+}
+
+/*Button style*/
+.btn{
+    background: transparent;
+    border-color: #fff;
+    border-radius: 0px;
+    border: 2.4px solid;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.btn:hover{
+    background: rgba(0, 0, 0, 0.3);
+    border-color: #fff;
+    border-radius: 0px;
+    border: 2.4px solid;
+}
+
+/* Animacion degradado del background */
+@-webkit-keyframes gradient_anim {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@-moz-keyframes gradient_anim {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@-o-keyframes gradient_anim {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+@keyframes gradient_anim { 
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+
+/* SVG styling */
+
+svg{
+    fill: white;
+}
+
+.shadow {
+    -webkit-box-shadow: 10px 19px 45px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 19px 45px -18px rgba(0,0,0,0.75);
+    box-shadow: 10px 19px 45px -18px rgba(0,0,0,0.75);
+}
+
+
+/*Responsive*/
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    /* Celulares: */
+    .text_center{
+    	padding-top: 4%;
+    }
+}

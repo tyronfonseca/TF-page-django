@@ -1,0 +1,105 @@
+{% extends "website/base.html" %}
+{% load staticfiles%}
+{% block title %}Torre{% endblock title %}
+{% block content %}
+<!-- Inicio Container -->
+<div class="container animated fadeIn">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="text-center"><b>Servidores de Torre</b></h2>
+			<ul>
+			<li>Servidores óptimos para empresas que buscan más capacidad de almacenamiento interno, mayor escalabilidad y conectividad para su negocio, de oficinas remotas, pequeñas y medianas empresas.</li>
+			</ul>
+			<ul>
+			<li> Perfecto para la colaboración, el almacenamiento y el uso compartido de archivos y la protección de datos en un servidor en mini torre compacto y silencioso.</li>
+			</ul>
+			<ul>
+			<li>Rendimiento, capacidad de ampliación y confiabilidad con procesador Intel®.</li>
+			</ul>
+			<ul>
+			<li>Ayuda a brindar un rendimiento sólido, capacidad de ampliación y confiabilidad a su organización con amplia potencia de procesamiento, memoria y ancho de banda de E/S del servidor.</li>
+			</ul>
+			<ul>
+			<li>Procese todo rápidamente con el servidor en torre Dell™ PowerEdge™ T620: alto rendimiento y alta disponibilidad empresarial con espacio incorporado para su crecimiento.</li>
+			</ul>
+			<ul>
+			<li>Impulsan una amplia gama de cargas de trabajo exigentes con un servidor flexible que ofrece el máximo rendimiento con dos <em>sockets</em> y gran capacidad de almacenamiento interno.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Servidor en torre PowerEdge™ T110 II
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <div class="container">
+        	<div class="row">
+        		<div class="col-md-6">
+        			<img src="{% static '/img/servers/torre/T110.png' %}" alt="" class="img-responsive">
+        		</div>
+        		<div class="col-md-6">
+        			<p>Segunda edición. Con nuevos procesadores. Primer servidor ideal para la pequeña empresa.</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Servidor en torre PowerEdge™ T430
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <div class="container">
+        	<div class="row">
+        		<div class="col-md-6">
+        			<img src="{% static '/img/servers/torre/T430_1.jpg' %}" alt="" class="img-responsive">
+        		</div>
+        		<div class="col-md-6">
+        			<p>Aumente la velocidad del rendimiento en los entornos de oficina con un potente servidor en torre de 2 sockets que cuenta con un diseño con capacidad de ampliación y una acústica silenciosa.</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Servidor en torre PowerEdge™ T630 - Generacion 13
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+      	<div class="container">
+        	<div class="row">
+        		<div class="col-md-6">
+        			<img src="{% static '/img/servers/torre/T630.jpg' %}" alt="" class="img-responsive">
+        		</div>
+        		<div class="col-md-6">
+        			<p>Impulsan una amplia gama de cargas de t rabajo exigentes con un servidor flexible que ofrece el máximo rendimiento con 2 sockets y gran capacidad de almacenamiento interno.</p>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	</div>
+</div>	
+<!-- Fin Container -->
+{% endblock %}
