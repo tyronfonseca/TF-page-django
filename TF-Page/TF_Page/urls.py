@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^',include('website.urls')),
     url(r'^siscon/',include('website-siscon.urls',namespace="siscon")),
+	url(r'^api/',include('api.urls',namespace="api")),
 ]
 
 handler404 = 'website.views.handler404'

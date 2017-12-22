@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Gender API (Beta){% endblock title %}
+{% block content %}
+<!-- Gender API -->
+<div style="padding:16px;">
+    <div class="row">
+        <div style="width: 60%;">
+            <form name="myform" action="" class="form" method="post"> {% csrf_token %}		
+		        <input type="text" name="name_param" id="name_param" class="form-control" placeholder="Ingresa el nombre a verificar">	         
+		        <button type="submit" class="btn btn-info" style="margin-top:15px;">Conseguir genero</button>
+            </form>
+        </div>
+    </div>
+    <div class="row animated fadeIn">      
+        
+        {% if data.count != 0 and data != 'empty'%}
+            {% for datos in data %}
+            <h1 style="text-transform:capitalize"><b>{{datos.name|title}}</b></h1>
+            <div class="col-md-4">                
+                <h3><b>
+                {% if datos.gender == 'f' %}
+                    Femenino
+                {% else %}
+                    Masculino
+                {% endif %}</b></h3>
+                <h4>Genero</h4>
+            </div>
+            <div class="col-md-4">               
+                <h3><b>{{datos.count}}</b></h3>
+                <h4>recurrencias en la base de datos</h4>
+            </div>   
+            <div class="col-md-4">
+                <script>chartAnimation('genero-chart', '{{datos.name}}','white', {{datos.percentage}});</script>                
+	            <ul class="chart" id="genero-chart">
+		            <li>
+			            <span>{{datos.percentage|floatformat}}%</span>			
+		            </li>
+	            </ul>
+                <h4>Porcentaje de acierto</h4>
+            </div>
+            
+            {% endfor %}
+        {% elif data != 'empty' %}
+            <br/>
+            <p>Error. Verifica los datos.</p> 
+            <p>Puede que el nombre no exista en la base de datos.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

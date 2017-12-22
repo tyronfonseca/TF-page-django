@@ -36,6 +36,8 @@ INSTALLED_APPS = [
 	'website',
     'ckeditor',
     'website-siscon',
+	'api',
+	'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

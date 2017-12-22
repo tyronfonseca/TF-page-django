@@ -32,7 +32,8 @@ class Imagenes(models.Model):
 #Tipos de trabajos
 TIPOS = (
     ("app", "APP"),
-    ("web", "WEB"),)
+    ("web", "WEB"),
+	("cus", "CUSTOM"))
 
 # Tabla Trabajos
 class Trabajos(models.Model):

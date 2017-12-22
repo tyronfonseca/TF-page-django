@@ -31,6 +31,30 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="api\admin.py" />
+    <Compile Include="api\admin.py" />
+    <Compile Include="api\apps.py" />
+    <Compile Include="api\apps.py" />
+    <Compile Include="api\importCSV.py" />
+    <Compile Include="api\importCSV.py" />
+    <Compile Include="api\migrations\0001_initial.py" />
+    <Compile Include="api\templates\migrations\0001_initial.py" />
+    <Compile Include="api\migrations\0002_auto_20170702_1945.py" />
+    <Compile Include="api\templates\migrations\0002_auto_20170702_1945.py" />
+    <Compile Include="api\migrations\__init__.py" />
+    <Compile Include="api\templates\migrations\__init__.py" />
+    <Compile Include="api\models.py" />
+    <Compile Include="api\models.py" />
+    <Compile Include="api\serializers.py" />
+    <Compile Include="api\serializers.py" />
+    <Compile Include="api\tests.py" />
+    <Compile Include="api\tests.py" />
+    <Compile Include="api\urls.py" />
+    <Compile Include="api\urls.py" />
+    <Compile Include="api\views.py" />
+    <Compile Include="api\views.py" />
+    <Compile Include="api\__init__.py" />
+    <Compile Include="api\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="TF_Page\__init__.py" />
     <Compile Include="TF_Page\settings.py" />
@@ -56,6 +80,27 @@
     <Compile Include="website\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="api\" />
+    <Folder Include="api\templates\migrations\" />
+    <Folder Include="api\templates\migrations\__pycache__\" />
+    <Folder Include="api\static\" />
+    <Folder Include="api\static\css\" />
+    <Folder Include="api\static\fonts\" />
+    <Folder Include="api\static\img\" />
+    <Folder Include="api\static\js\" />
+    <Folder Include="api\templates\" />
+    <Folder Include="api\templates\facebook\" />
+    <Folder Include="api\__pycache__\" />
+    <Folder Include="api\migrations\" />
+    <Folder Include="api\static\" />
+    <Folder Include="api\static\css\" />
+    <Folder Include="api\static\fonts\" />
+    <Folder Include="api\static\img\" />
+    <Folder Include="api\static\js\" />
+    <Folder Include="api\templates\" />
+    <Folder Include="api\templates\facebook\" />
+    <Folder Include="api\__pycache__\" />
+    <Folder Include="api\" />
     <Folder Include="TF_Page\" />
     <Folder Include="website-siscon\" />
     <Folder Include="website-siscon\migrations\" />
@@ -83,6 +128,73 @@
     <Folder Include="website\templates\errorHandlers\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="api\admin.pyc" />
+    <Content Include="api\admin.pyc" />
+    <Content Include="api\migrations\0001_initial.pyc" />
+    <Content Include="api\templates\migrations\0001_initial.pyc" />
+    <Content Include="api\migrations\0002_auto_20170702_1945.pyc" />
+    <Content Include="api\templates\migrations\0002_auto_20170702_1945.pyc" />
+    <Content Include="api\migrations\__init__.pyc" />
+    <Content Include="api\templates\migrations\__init__.pyc" />
+    <Content Include="api\templates\migrations\__pycache__\0001_initial.cpython-36.pyc" />
+    <Content Include="api\templates\migrations\__pycache__\0002_auto_20170702_1945.cpython-36.pyc" />
+    <Content Include="api\templates\migrations\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="api\models.pyc" />
+    <Content Include="api\models.pyc" />
+    <Content Include="api\serializers.pyc" />
+    <Content Include="api\serializers.pyc" />
+    <Content Include="api\static\css\bootstrap-theme.css" />
+    <Content Include="api\static\css\bootstrap-theme.css" />
+    <Content Include="api\static\css\bootstrap-theme.css.map" />
+    <Content Include="api\static\css\bootstrap-theme.css.map" />
+    <Content Include="api\static\css\bootstrap-theme.min.css" />
+    <Content Include="api\static\css\bootstrap-theme.min.css" />
+    <Content Include="api\static\css\bootstrap-theme.min.css.map" />
+    <Content Include="api\static\css\bootstrap-theme.min.css.map" />
+    <Content Include="api\static\css\bootstrap.css" />
+    <Content Include="api\static\css\bootstrap.css" />
+    <Content Include="api\static\css\bootstrap.css.map" />
+    <Content Include="api\static\css\bootstrap.css.map" />
+    <Content Include="api\static\css\bootstrap.min.css" />
+    <Content Include="api\static\css\bootstrap.min.css" />
+    <Content Include="api\static\css\bootstrap.min.css.map" />
+    <Content Include="api\static\css\bootstrap.min.css.map" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="api\static\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="api\static\img\profile.jpg" />
+    <Content Include="api\static\img\profile.jpg" />
+    <Content Include="api\static\js\bootstrap.js" />
+    <Content Include="api\static\js\bootstrap.js" />
+    <Content Include="api\static\js\bootstrap.min.js" />
+    <Content Include="api\static\js\bootstrap.min.js" />
+    <Content Include="api\static\js\fb.js" />
+    <Content Include="api\static\js\fb.js" />
+    <Content Include="api\static\js\jquery-3.2.1.min.js" />
+    <Content Include="api\static\js\jquery-3.2.1.min.js" />
+    <Content Include="api\static\js\npm.js" />
+    <Content Include="api\static\js\npm.js" />
+    <Content Include="api\templates\facebook\header.html" />
+    <Content Include="api\templates\facebook\header.html" />
+    <Content Include="api\templates\facebook\test.html" />
+    <Content Include="api\templates\facebook\test.html" />
+    <Content Include="api\urls.pyc" />
+    <Content Include="api\urls.pyc" />
+    <Content Include="api\views.pyc" />
+    <Content Include="api\views.pyc" />
+    <Content Include="api\__init__.pyc" />
+    <Content Include="api\__init__.pyc" />
+    <Content Include="api\__pycache__\admin.cpython-36.pyc" />
+    <Content Include="api\__pycache__\models.cpython-36.pyc" />
+    <Content Include="api\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="api\__pycache__\__init__.cpython-36.pyc" />
     <Content Include="requirements.txt" />
     <Content Include="website-siscon\admin.pyc" />
     <Content Include="website-siscon\migrations\__init__.pyc" />
@@ -156,6 +268,9 @@
     <Content Include="website-siscon\static\img\webcam-150x150.jpg" />
     <Content Include="website-siscon\static\img\windows-server.png" />
     <Content Include="website-siscon\static\img\wire-icon.png" />
+    <Content Include="website-siscon\static\js\bootstrap.js" />
+    <Content Include="website-siscon\static\js\bootstrap.min.js" />
+    <Content Include="website-siscon\static\js\jquery-1.10.2.js" />
     <Content Include="website-siscon\templates\website\base.html" />
     <Content Include="website-siscon\templates\website\includes\carousel_home.html" />
     <Content Include="website-siscon\templates\website\includes\carousel_network.html" />
@@ -177,6 +292,10 @@
     <Content Include="website-siscon\views.pyc" />
     <Content Include="website-siscon\__init__.pyc" />
     <Content Include="website\static\css\animate.css" />
+    <Content Include="website\static\css\bootstrap.css" />
+    <Content Include="website\static\css\bootstrap.min.css" />
+    <Content Include="website\static\css\chart.css" />
+    <Content Include="website\static\css\modal.css" />
     <Content Include="website\static\css\style.css" />
     <Content Include="website\static\img\fotw-app.jpg" />
     <Content Include="website\static\img\fotw-launcher.png" />
@@ -185,21 +304,22 @@
     <Content Include="website\static\img\pda-app.jpg" />
     <Content Include="website\static\img\pda-launcher.png" />
     <Content Include="website\static\img\pda-logo.png" />
+    <Content Include="website\static\js\bootstrap.js" />
+    <Content Include="website\static\js\bootstrap.min.js" />
+    <Content Include="website\static\js\chart.js" />
     <Content Include="website\static\js\delay.js" />
+    <Content Include="website\static\js\jquery-1.10.2.js" />
+    <Content Include="website\static\js\modal.js" />
     <Content Include="website\templates\base.html" />
     <Content Include="website\templates\contacto.html" />
     <Content Include="website\templates\detail_trabajo.html" />
     <Content Include="website\templates\errorHandlers\404.html" />
     <Content Include="website\templates\errorHandlers\500.html" />
+    <Content Include="website\templates\gender.html" />
     <Content Include="website\templates\index.html" />
     <Content Include="website\templates\quien.html" />
     <Content Include="website\templates\includes\SVG.html" />
     <Content Include="website\templates\trabajos.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="readme.html">
-      <SubType>WebBrowser</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.6" />

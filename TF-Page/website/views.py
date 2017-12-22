@@ -2,6 +2,7 @@ from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 from django.views.generic import TemplateView, DetailView
 from website.models import Info_pagina, Trabajos, Habilidades
+from api.models import Gender
 
 class QuienView(TemplateView):
     template_name = "quien.html"
@@ -48,6 +49,13 @@ class ContactoView(TemplateView):
         context['page_data'] = Info_pagina.objects.first()
 
         return context
+
+def gender(request):
+	data = 'empty'
+	if request.method == 'POST':
+		name_param = request.POST.get('name_param')
+		data = Gender.objects.filter(name=name_param.upper())
+	return render(request,'gender.html',{'data':data})
 
 def handler404(request):
         response = render_to_response('errorHandlers/404.html', {},
