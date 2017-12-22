@@ -303,6 +303,7 @@
     <Content Include="website\static\img\fotw-launcher.png" />
     <Content Include="website\static\img\fotw-logo.png" />
     <Content Include="website\static\img\freedom.png" />
+    <Content Include="website\static\img\gender-app.jpg" />
     <Content Include="website\static\img\pda-app.jpg" />
     <Content Include="website\static\img\pda-launcher.png" />
     <Content Include="website\static\img\pda-logo.png" />
