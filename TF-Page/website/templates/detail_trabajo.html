@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block title %}{{object.nombre}}{% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}"/>
+{% endblock %}
 {% block content %}
 <!-- Detail Trabajo -->
 <div style="padding:16px;">

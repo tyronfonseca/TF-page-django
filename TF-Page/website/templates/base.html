@@ -13,11 +13,8 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/chart.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/modal.css' %}"/>
-    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/chart.js' %}"></script>
+    {% block styles %}{% endblock %}
+    {% block scripts %}{% endblock %}
 </head>
 <body>
 	
@@ -47,6 +44,8 @@
                 </div>
 		</div>
 	</div>
+    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 	<script type="text/javascript">
 		console.log("%cAja! Tratando ver donde no se debe, si quieres saber algo del codigo no dudes en preguntarme. -Tyron", "font-size: x-large");
 	</script>

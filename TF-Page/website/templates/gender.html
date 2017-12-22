@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block title %}Gender API (Beta){% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/chart.css' %}">
+{% endblock %}
+{% block scripts %}
+    <script src="{% static 'js/chart.js' %}"></script>
+{% endblock %}
 {% block content %}
 <!-- Gender API -->
 <div style="padding:16px;">

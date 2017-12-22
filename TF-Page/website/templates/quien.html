@@ -1,72 +1,71 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% block title %}Quien Soy{% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/ChartStyles.css' %}">
+{% endblock %}
 {% block content %}
-{% include "includes/SVG.html" %}
 <!-- Quien -->
-<div class="animated fadeIn" style="padding:16px;">
+<div class="animated fadeIn" style="padding:16px;">   
     <div class="row">
-	    <div class="quien col-md-8 col-md-offset-2">
-		    <h1>Quien Soy</h1>
-		    <p>{{page_data.home_desc|safe}}</p>
+        <div class="col-md-4">
+            <img src="{% static '' %}img/profile-pic.png" class="img-circle" width="150" height="150"/>
+            <h5><i>"Por el dia programo y por la noche combato el crimen."</i></h5>
+        </div>
+        <div class="quien col-md-8" style="text-align:left;">
+            <p>{{page_data.home_desc|safe}}</p>            
             <a class="btn btn-primary btn-md" href="/proyectos">Ver proyectos</a>
-	    </div>
+        </div>
     </div>
     <br/>
-
-     <hr>
+    <hr style="width: 80%;">
+    <h3>Experiencia</h3>
     <div class="row">
-        <h2>Experiencia</h2>
-        <br/>
-        <div class="col-md-8 col-md-offset-2">
-		    <p>{{page_data.habilidades_desc}}</p>
-        </div>
-    </div>
-
-    <br />
-    <div class="row">
-        <div class="col-md-4 col-sm-4">
-            <svg class="svg-icon">
-            <use xlink:href="#android" />
-            </svg>
-             <br/>
-            <p>Aplicaciones</p>
-            <ul>
-            {% for app in habilidad_app %}
-                
-                    <li>{{app.nombre}}</li>
-                
-            {% endfor %}
-           </ul>
-        </div>
-        <div class="col-md-4 col-sm-4">
-            <svg class="svg-icon">
-            <use xlink:href="#html" />
-            </svg>
-            <br/>
-            <p>Paginas web</p>
-            <ul>
-            {% for web in habilidad_web %}
-               
-                    <li>{{web.nombre}}</li>
-               
-            {% endfor %}
+        <div class="col-md-4">
+            <ul class="chart chart-app">
+                <li>
+                    <span>Android (Java)</span>
+                </li>
+                <li>
+                    <span>iOS (Swift 2)</span>
+                </li>
             </ul>
         </div>
-        <div class="col-md-4 col-sm-4">
-            <svg class="svg-icon">
-            <use xlink:href="#coding" />
-            </svg>
-             <br/>
-            <p>Lenguajes/Herramientas</p>
-            <ul>
-            {% for lan in habilidad_lan %}
-
-                    <li>{{lan.nombre}}</li>
-                
-            {% endfor %}
+        <div class="col-md-4">
+            <ul class="chart chart-web">
+                <li>
+                    <span>Angular</span>
+                </li>
+                <li>
+                    <span>Django</span>
+                </li>
+                <li>
+                    <span>ASP.NET MVC</span>
+                </li>
+                <li>
+                    <span>PHP</span>
+                </li>
             </ul>
         </div>
-    
+        <div class="col-md-4">
+            <ul class="chart chart-tools">
+                <li>
+                    <span>Photoshop</span>
+                </li>
+                <li>
+                    <span>Boostrap 3</span>
+                </li>
+                <li>
+                    <span>Git</span>
+                </li>
+                <li>
+                    <span>MySQL/SQLite</span>
+                </li>
+                <li>
+                    <span>Cocoapods</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 {% endblock %}

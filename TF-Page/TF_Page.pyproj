@@ -195,6 +195,7 @@
     <Content Include="api\__pycache__\models.cpython-36.pyc" />
     <Content Include="api\__pycache__\__init__.cpython-36.pyc" />
     <Content Include="api\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="db.sqlite3" />
     <Content Include="requirements.txt" />
     <Content Include="website-siscon\admin.pyc" />
     <Content Include="website-siscon\migrations\__init__.pyc" />
@@ -295,6 +296,7 @@
     <Content Include="website\static\css\bootstrap.css" />
     <Content Include="website\static\css\bootstrap.min.css" />
     <Content Include="website\static\css\chart.css" />
+    <Content Include="website\static\css\ChartStyles.css" />
     <Content Include="website\static\css\modal.css" />
     <Content Include="website\static\css\style.css" />
     <Content Include="website\static\img\fotw-app.jpg" />
@@ -304,6 +306,7 @@
     <Content Include="website\static\img\pda-app.jpg" />
     <Content Include="website\static\img\pda-launcher.png" />
     <Content Include="website\static\img\pda-logo.png" />
+    <Content Include="website\static\img\profile-pic.png" />
     <Content Include="website\static\js\bootstrap.js" />
     <Content Include="website\static\js\bootstrap.min.js" />
     <Content Include="website\static\js\chart.js" />
