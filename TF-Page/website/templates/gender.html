@@ -17,26 +17,30 @@
 		        <button type="submit" class="btn btn-info" style="margin-top:15px;">Conseguir genero</button>
             </form>
         </div>
+        <br/>
     </div>
     <div class="row animated fadeIn">      
         
         {% if data.count != 0 and data != 'empty'%}
             {% for datos in data %}
-            <h1 style="text-transform:capitalize"><b>{{datos.name|title}}</b></h1>
-            <div class="col-md-4">                
-                <h3><b>
-                {% if datos.gender == 'f' %}
-                    Femenino
-                {% else %}
-                    Masculino
-                {% endif %}</b></h3>
-                <h4>Genero</h4>
+            <div class="col-xs-6 col-md-12">
+                <h1 style="text-transform:capitalize"><b>{{datos.name|title}}</b></h1>
             </div>
-            <div class="col-md-4">               
+            <div class="col-md-4 col-xs-6">                
+                
+                {% if datos.gender == 'f' %}
+                    <img src="{% static ''%}img/female.png"/>
+                    <h3><b>Femenino</b></h3>                    
+                {% else %}
+                    <img src="{% static ''%}img/male.png"/>
+                    <h3><b>Masculino</b></h3>  
+                {% endif %}       
+            </div>
+            <div class="col-md-4 col-xs-6">               
                 <h3><b>{{datos.count}}</b></h3>
                 <h4>recurrencias en la base de datos</h4>
             </div>   
-            <div class="col-md-4">
+            <div class="col-md-4 col-xs-6">
                 <script>chartAnimation('genero-chart', '{{datos.name}}','white', {{datos.percentage}});</script>                
 	            <ul class="chart" id="genero-chart">
 		            <li>

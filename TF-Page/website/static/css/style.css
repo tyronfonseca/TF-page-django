@@ -243,4 +243,8 @@ svg{
     .text_center{
     	padding-top: 4%;
     }
+
+    .col-xs-6{
+        padding-bottom:25px;
+    }
 }
