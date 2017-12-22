@@ -20,13 +20,23 @@
             {{object.funciones|safe}}
         </div>
         <div class="col-md-6" style="margin-bottom:30px;">
-            <img  class="shadow img-responsive" src="{% static '' %}img/{{object.abreviacion}}-app.jpg" alt="" style="width:100%;height:300px;object-fit:cover"/>
+            <img  class="shadow img-responsive img-trigger" src="{% static '' %}img/{{object.abreviacion}}-app.jpg" alt="{{object.nombre}}" style="width:100%;height:300px;object-fit:cover" onclick="displayModal(this);"/>
         </div>
-        {% if object.tipo == 'web' %}
+        {% if object.tipo != 'app' %}
         <div>
             <a class="btn btn-primary btn-md" href="/{{object.abreviacion}}">Version live</a>
         </div>
         {% endif %}
    </div>
 </div>
+<!-- MODAL -->
+<div id="mModal" class="modal-img">
+  <!-- Close button -->
+  <span class="close-modal">&times;</span>
+  <!-- Modal content (Image) -->
+  <img class="modal-img-content" id="img-modal">
+  <!-- Modal Caption (Image text) -->
+  <div id="caption-modal"></div>
+</div>
+<script src="{% static 'js/modal.js' %}"></script>
 {% endblock %}

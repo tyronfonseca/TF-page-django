@@ -7,5 +7,6 @@ urlpatterns = [
 	url(r'^quien/$', QuienView.as_view()),
     url(r'^proyectos/$', TrabajosView.as_view()),
     url(r'^proyectos/(?P<pk>\d+)/$', DetailTrabajoView.as_view()),
-    url(r'^contacto/$',ContactoView.as_view())
+    url(r'^contacto/$',ContactoView.as_view()),
+	url(r'^gender/$',gender)
 ]

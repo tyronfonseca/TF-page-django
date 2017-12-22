@@ -12,8 +12,8 @@
 	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
-	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </head>
 <body>
 <!-- Inicio NavBar -->
@@ -21,7 +21,7 @@
             <a href="/proyectos/3"><button class="btn btn-info">Regresar</button></a>
             <p class="text-muted">Este texto y boton no estan en la version final.</p> 
         </div>
-	<div class="navbar navbar-default navbar-static-top">
+	<div class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<a href="/" class="navbar-brand"><img src="{% static 'img/siscon_logo.svg' %}" alt=""></a>
 			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -59,7 +59,7 @@
 
 
 <!-- Inicio Footer -->
-<div class="navbar navbar-default navbar-static-bottom footer">
+<div class="navbar navbar-inverse navbar-static-bottom footer">
 	<div class="container">
 		<p class="navbar-text pull-left">© Copyright {% now "Y" %}. Todos los derechos reservados</p>
 		<a href="/siscon/contacto" class="navbar-text pull-right">Contacto</a>

@@ -10,16 +10,27 @@ html, body {
       height: 100%; 
 }
 
-nav{
-	float: right;
-	margin: 30px 30px 0 0;
+body {
+    min-width: 100%;
+    min-height: 100%;
+    background: linear-gradient(18deg, #9baa48, #111174);
+    background-size: 400% 400%;
+/*   -webkit-animation: gradient_anim 20s ease infinite;
+    -moz-animation: gradient_anim 20s ease infinite;
+    -o-animation: gradient_anim 20s ease infinite;
+    animation: gradient_anim 20s ease infinite;
+*/
 }
 
-nav a{
+ul.nav{
+	float: right;
+}
+
+
+ul.nav > li a{
 	display: inline-block;
 	margin-left: 20px;
 	font-weight: 700;
-	font-size: 1.1em;
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
@@ -30,36 +41,60 @@ nav a{
   transition: all .2s ease-in;
 }
 
-nav a:hover{
+ul.nav > li > a:hover{
 	color: #ccc;
 	text-decoration: none;
-}
-.wrapper{
-    min-width: 100%;
-    min-height: 100%;
-    background: linear-gradient(326deg, #9baa48, #111174);
-	background-size: 400% 400%;
-	-webkit-animation: gradient_anim 20s ease infinite;
-	-moz-animation: gradient_anim 20s ease infinite;
-	-o-animation: gradient_anim 20s ease infinite;
-	animation: gradient_anim 20s ease infinite;
+    background-color: transparent;
 }
 
-.col-xs-6, .col-sm-4{
-	background-color: blue;
+.navbar-default{
+    background-color:transparent;
+    border-color: transparent;
 }
+
+    .navbar-default .navbar-nav > li > a {
+        color: #fff;
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+    }
+.navbar {
+    border: 0px;
+}
+
+.navbar-default .navbar-toggle {
+     border-color: transparent;
+}
+
+.navbar-collapse {
+    border-top: 0px;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #ccc;
+    background-color: transparent;
+}
+
 .text_center{
 	margin: 0px auto;
-    padding-top: 13%;
+    padding-top: 5%;
     text-align: center;
 }
 
 h1{
-	font-size: 2.5em;
+	font-size: 2.3em;
 }
 
 p{
-	font-size: 1.4em;
+	font-size: 1.2em;
 }
 li{
 	font-size: 1.2em;
@@ -86,9 +121,9 @@ li{
   font-size: 2em;
 }
 
-ul{
-	list-style-type: none;
-	text-align: left;
+ul {
+    padding-left: 15px;
+    text-align: left;
 }
 
 
@@ -114,10 +149,6 @@ ul{
   background: rgba(0, 0, 0, 0.6);
 }
 
-.cont {
-    border: 3px solid white;
-}
-
 .cont:hover .overlay {
   opacity: 1;
 }
@@ -137,51 +168,6 @@ ul{
     padding-left: 0px;
 }
 
-/* Modal */
-.modal-content{
-	border-radius: 0px;
-	background: linear-gradient(326deg, #9baa48, #111174);
-	background-size: 150% 150%;
-	border:none;
-}
-
-.modal-footer{
-	border-top: none;
-}
-
-.modal-header{
-	border-bottom: none;
-}
-
-.modal.fade .modal-dialog {
-    -webkit-transform: scale(0.1);
-    -moz-transform: scale(0.1);
-    -ms-transform: scale(0.1);
-    transform: scale(0.1);
-    top: 300px;
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.modal.fade.in .modal-dialog {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform: translate3d(0, -300px, 0);
-    transform: translate3d(0, -300px, 0);
-    opacity: 1;
-}
-
-body.modal-open .wrapper{
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
-}
 /*Button style*/
 .btn{
     background: transparent;
@@ -199,6 +185,21 @@ body.modal-open .wrapper{
     border-color: #fff;
     border-radius: 0px;
     border: 2.4px solid;
+}
+
+/* Modificacion bootstrap's form-control */
+.form-control {
+    background-color: rgba(0,0,0,0.3);
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius:0;
+}
+.form-control:focus {
+    border-color: white;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
 /* Animacion degradado del background */
@@ -223,28 +224,23 @@ body.modal-open .wrapper{
     100%{background-position:49% 0%}
 }
 
-/*Fade Animation*/
-.animate-switch.ng-animate {
-    transition:1.2s linear all;
+/* SVG styling */
+
+svg{
+    fill: white;
 }
 
-.animate-switch.ng-leave.ng-leave-active,
-.animate-switch.ng-enter {
-    opacity: 0;
+.shadow {
+    -webkit-box-shadow: 10px 19px 45px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 19px 45px -18px rgba(0,0,0,0.75);
+    box-shadow: 10px 19px 45px -18px rgba(0,0,0,0.75);
 }
 
-.animate-switch.ng-leave{
-	transition:0s linear all;
-  	opacity:1;
-}
-.animate-switch.ng-enter.ng-enter-active {
-  	opacity: 1;
-}
 
 /*Responsive*/
 @media only screen and (max-width: 768px) and (orientation: portrait) {
     /* Celulares: */
     .text_center{
-    	padding-top: 20%;
+    	padding-top: 4%;
     }
 }

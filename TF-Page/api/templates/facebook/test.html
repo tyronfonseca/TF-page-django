@@ -1,0 +1,17 @@
+{% extends "facebook/header.html" %}
+
+{% block content %}
+
+	{% for page in object_list %}
+		<h4>{{page.name}}</h4>
+		<h4>{{page.likes}}</h4>
+		<h4>{{page.fb_id}}</h4>
+		{% for item in page.posts.all %}
+			<h4>{{item.post_type}}</h4>
+			{{item.typeReactionHandler|safe}}
+			<br>
+			{{item.genderReactionHandler|safe}}
+		{% endfor %}	
+	{% endfor %}
+
+{% endblock %}

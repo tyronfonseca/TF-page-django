@@ -1,0 +1,41 @@
+/* RESET STYLES–––––––––––––––––––––––––––––––––––––––––––––––––– */
+	.chart {  margin: 0 auto;  padding: 0;  list-style-type: none; overflow: hidden;}
+	.chart *,.chart::before {  box-sizing: border-box;}
+	/* CHART-SKILLS STYLES–––––––––––––––––––––––––––––––––––––––––––––––––– */
+	.chart {  position: relative;  width: 200px;  height: 100px;}
+	.chart::before,.chart::after {  position: absolute;}
+	.chart::before {width: inherit;  height: inherit;  border: 7px solid rgba(255, 255, 255, .3);  border-bottom: none;  border-top-left-radius: 100px;  border-top-right-radius: 100px;}
+	.chart::after {left: 50%;  bottom: 10px;  transform: translateX(-50%);  font-size: 1.1rem;  font-weight: bold;  color: cadetblue;}
+	.chart::before{ content: ''; }
+	.chart li {
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	  width: inherit;
+	  height: inherit;
+	  border: 7px solid;
+	  border-top: none;
+	  border-bottom-left-radius: 100px;
+	  border-bottom-right-radius: 100px;
+	  transform-origin: 50% 0;
+	  animation-fill-mode: forwards;
+	  animation-duration: .8s;
+	  animation-timing-function: linear;
+	  transform-style: preserve-3d;
+      backface-visibility: hidden;
+	}
+	.chart span {
+	  position: absolute;
+	  font-size: 1.6rem;
+	  backface-visibility: hidden;
+	  animation: fade-in .9s linear forwards;
+	}
+	@keyframes fade-in {
+	  0%,
+	  90% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
