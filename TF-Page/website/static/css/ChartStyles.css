@@ -1,0 +1,391 @@
+﻿/*––––––––––––––––––––––––––RESET STYLES––––––––––––––––––––––––*/
+.chart {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.chart *, .chart::before {
+    box-sizing: border-box;
+}
+/**––––––––––––––––––––––––––CHART STYLES–––––––––––––––––––––––––––-
+*  Estilos que todos los 'chart's' comparten.
+*/
+
+.chart {
+    position: relative;
+    width: 350px;
+    height: 175px;
+}
+
+.chart::before, .chart::after {
+    position: absolute;
+}
+
+.chart::before {
+    width: inherit;
+    height: inherit;
+    border: 10px solid rgba(255, 255, 255, .3);
+    border-bottom: none;
+    border-top-left-radius: 175px;
+    border-top-right-radius: 175px;
+}
+
+.chart::after {
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.chart::before {
+    content: '';
+}
+
+.chart li {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 10px solid;
+    border-top: none;
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+    transform-origin: 50% 0;
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-timing-function: linear;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.chart span {
+    position: absolute;
+    font-size: 1.4rem;
+    backface-visibility: hidden;
+    animation: fade-in .4s linear forwards;
+}
+
+/*––––––––––––––––––––––––––APP-CHART STYLES–––––––––––––––––––––––– 
+    Estilos para Chart de aplicaciones moviles.
+*/
+
+.chart-app::after {
+    content: 'Desarrollo movil (Nativo)';
+    text-align: center;
+}
+
+.chart-app li:nth-child(1) {
+    z-index: 2;
+    border-color: #1B264F;
+    animation-name: app-rotate-one;
+}
+
+.chart-app li:nth-child(2) {
+    z-index: 1;
+    border-color: #274690;
+    animation-name: app-rotate-two;
+    animation-delay: .4s;
+}
+
+.chart-app li:nth-child(1) span {
+    top: 5px;
+    left: 10px;
+    transform: rotate(-99deg);
+}
+
+.chart-app li:nth-child(2) span {
+    top: 20px;
+    left: 10px;
+    transform: rotate(-180deg);
+    animation-delay: .4s;
+}
+
+@keyframes app-rotate-one {
+    100% {
+        transform: rotate(99deg);
+        /**
+	     * 55% => 99deg
+	     */
+    }
+}
+
+@keyframes app-rotate-two {
+    0% {
+        /**
+	     * Inicia donde termina el primero.
+	     */
+        transform: rotate(99deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+        /**
+	     * 45% => 81deg 
+	     * 81 + 99 => 180deg
+	     */
+    }
+}
+
+/*––––––––––––––––––––––––––WEB-CHART STYLES–––––––––––––––––––––––– 
+     Estilos para Chart de desarrollo web.
+*/
+
+.chart-web::after {
+    content: 'Desarrollo web';
+    text-align: center;
+}
+.chart-web li:nth-child(1) {
+    z-index: 4;
+    border-color: #1B264F;
+    animation-name: web-rotate-one;
+}
+
+.chart-web li:nth-child(2) {
+    z-index: 3;
+    border-color: #274690;
+    animation-name: web-rotate-two;
+    animation-delay: .4s;
+}
+
+.chart-web li:nth-child(3) {
+    z-index: 2;
+    border-color: #546AA8;
+    animation-name: web-rotate-three;
+    animation-delay: .8s;
+}
+
+.chart-web li:nth-child(4) {
+    z-index: 1;
+    border-color: #302B27;
+    animation-name: web-rotate-four;
+    animation-delay: 1.2s;
+}
+
+.chart-web li:nth-child(1) span {
+    top: 5px;
+    left: 10px;
+    transform: rotate(-21.6deg);
+}
+
+.chart-web li:nth-child(2) span {
+    top: 20px;
+    left: 10px;
+    transform: rotate(-79.2deg);
+    animation-delay: .4s;
+}
+
+.chart-web li:nth-child(3) span {
+    top: 18px;
+    left: 10px;
+    transform: rotate(-140.4deg);
+    animation-delay: .8s
+}
+
+.chart-web li:nth-child(4) span {
+    top: 10px;
+    left: 10px;
+    transform: rotate(-180deg);
+    animation-delay: 1.2s
+}
+
+@keyframes fade-in {
+    0%, 90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes web-rotate-one {
+    100% {
+        transform: rotate(21.6deg);
+        /**
+	     * 12% => 21.6deg
+	     */
+    }
+}
+
+@keyframes web-rotate-two {
+    0% {
+        transform: rotate(21.6deg);
+    }
+
+    100% {
+        transform: rotate(79.2deg);
+        /**
+	     * 32% => 57.6deg 
+	     * 57.6 + 21.6 => 79.2deg
+	     */
+    }
+}
+
+@keyframes web-rotate-three {
+    0% {
+        transform: rotate(79.2deg);
+    }
+
+    100% {
+        transform: rotate(140.4deg);
+        /**
+	     * 34% => 61.2deg 
+	     * 61.2 + 79.2 => 140.4deg
+	     */
+    }
+}
+
+@keyframes web-rotate-four {
+    0% {
+        transform: rotate(140.4deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+        /**
+	     * 22% => 39.6deg  
+	     * 140.4 + 39.6 => 180deg
+	     */
+    }
+}
+
+/*––––––––––––––––––––––––––Tools-CHART STYLES–––––––––––––––––––––––– 
+     Estilos para Chart de desarrollo web.
+*/
+.chart-tools::after {
+    content: 'Otros';
+    text-align: center;
+}
+
+.chart-tools li:nth-child(1) {
+    z-index: 5;
+    border-color: #1B264F;
+    animation-name: tools-rotate-one;
+}
+
+.chart-tools li:nth-child(2) {
+    z-index: 4;
+    border-color: #274690;
+    animation-name: tools-rotate-two;
+    animation-delay: .4s;
+}
+
+.chart-tools li:nth-child(3) {
+    z-index: 3;
+    border-color: #546AA8;
+    animation-name: tools-rotate-three;
+    animation-delay: .8s;
+}
+
+.chart-tools li:nth-child(4) {
+    z-index: 2;
+    border-color: #302B27;
+    animation-name: tools-rotate-four;
+    animation-delay: 1.2s;
+}
+.chart-tools li:nth-child(5) {
+    z-index: 1;
+    border-color: #F5F3F5;
+    animation-name: tools-rotate-five;
+    animation-delay: 1.6s;
+}
+.chart-tools li:nth-child(1) span {
+    top: 5px;
+    left: 10px;
+    transform: rotate(-54deg);
+}
+
+.chart-tools li:nth-child(2) span {
+    top: 20px;
+    left: 10px;
+    transform: rotate(-90deg);
+    animation-delay: .4s;
+}
+
+.chart-tools li:nth-child(3) span {
+    top: 18px;
+    left: 10px;
+    transform: rotate(-117deg);
+    animation-delay: .8s
+}
+
+.chart-tools li:nth-child(4) span {
+    top: 10px;
+    left: 10px;
+    transform: rotate(-153deg);
+    animation-delay: 1.2s
+}
+.chart-tools li:nth-child(5) span {
+    top: 10px;
+    left: 5px;
+    transform: rotate(-180deg);
+    animation-delay: 1.6s
+}
+@keyframes tools-rotate-one {
+    100% {
+        transform: rotate(54deg);
+        /**
+	     * 30% => 54deg
+	     */
+    }
+}
+
+@keyframes tools-rotate-two {
+    0% {
+        transform: rotate(54deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+        /**
+	     * 20% => 36deg 
+	     * 36 + 54 => 90deg
+	     */
+    }
+}
+
+@keyframes tools-rotate-three {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(117deg);
+        /**
+	     * 15% => 27deg 
+	     * 27 + 90 => 117deg
+	     */
+    }
+}
+
+@keyframes tools-rotate-four {
+    0% {
+        transform: rotate(117deg);
+    }
+
+    100% {
+        transform: rotate(153deg);
+        /**
+	     * 20% => 36deg  
+	     * 36 + 117 => 153deg
+	     */
+    }
+}
+@keyframes tools-rotate-five {
+    0% {
+        transform: rotate(153deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+        /**
+	     * 15% => 27deg  
+	     * 27 + 153 => 180deg
+	     */
+    }
+}
