@@ -26,8 +26,7 @@ SECRET_KEY = '7b5f30dc-b05d-404a-a10b-9bb6a47b5cdc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.10.101',
-                 'localhost']
+ALLOWED_HOSTS = ['Tf14.pythonanywhere.com']
 
 
 # Application definition
@@ -37,7 +36,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'website-siscon',
 	'api',
-	'rest_framework',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,4 +126,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+#STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+

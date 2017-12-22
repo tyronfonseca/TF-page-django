@@ -10,6 +10,6 @@ urlpatterns = [
     url(r'^create/$',views.CreateGenderName.as_view(), name ='create'),
     url(r'^(?P<pk>\d+)/delete/$',views.DeleteGenderName.as_view(), name ='delete'),
     url(r'^fb/$',ListView.as_view(queryset=PagesModel.objects.all(),
-     template_name="facebook/test.html"))    
+     template_name="facebook/test.html"))
    ]
-urlpatterns = format_suffix_patterns(urlpatterns)  
+urlpatterns = format_suffix_patterns(urlpatterns)

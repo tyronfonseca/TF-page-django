@@ -13,12 +13,13 @@ html, body {
 body {
     min-width: 100%;
     min-height: 100%;
-    background: linear-gradient(180deg, #9baa48, #111174);
+    background: linear-gradient(18deg, #9baa48, #111174);
     background-size: 400% 400%;
-    -webkit-animation: gradient_anim 20s ease infinite;
+/*   -webkit-animation: gradient_anim 20s ease infinite;
     -moz-animation: gradient_anim 20s ease infinite;
     -o-animation: gradient_anim 20s ease infinite;
     animation: gradient_anim 20s ease infinite;
+*/
 }
 
 ul.nav{
@@ -184,6 +185,21 @@ ul {
     border-color: #fff;
     border-radius: 0px;
     border: 2.4px solid;
+}
+
+/* Modificacion bootstrap's form-control */
+.form-control {
+    background-color: rgba(0,0,0,0.3);
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius:0;
+}
+.form-control:focus {
+    border-color: white;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
 /* Animacion degradado del background */
