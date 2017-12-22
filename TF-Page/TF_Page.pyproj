@@ -195,6 +195,7 @@
     <Content Include="api\__pycache__\models.cpython-36.pyc" />
     <Content Include="api\__pycache__\__init__.cpython-36.pyc" />
     <Content Include="api\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="db.sqlite3" />
     <Content Include="requirements.txt" />
     <Content Include="website-siscon\admin.pyc" />
     <Content Include="website-siscon\migrations\__init__.pyc" />
