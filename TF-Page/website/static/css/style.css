@@ -92,6 +92,7 @@ ul {
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
         }
+
 input[type=text] {
     padding: 13px;
     width: 60%;
