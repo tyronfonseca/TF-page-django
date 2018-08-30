@@ -43,6 +43,7 @@ class Trabajos(models.Model):
     abreviacion = models.CharField(max_length=10,default='null')
     tipo = models.CharField(max_length=3,choices=TIPOS)
     video = models.CharField(max_length=15,default='null')
+    color = models.CharField(max_length=6,default='null')
 
     def __str__(self):
         return self.nombre

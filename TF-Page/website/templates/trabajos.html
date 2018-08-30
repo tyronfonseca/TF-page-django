@@ -1,27 +1,41 @@
 {% extends "base.html" %}
-{% block title %}Proyectos{% endblock title %}
+{% block title %}Works{% endblock title %}
 {% load staticfiles %}
+{% block styles %}
+<style>
+	#backgroundImg{
+		display: block;
+		position:fixed;
+		top: 0;
+		right: 0;
+		z-index:0;
+		height:50%;
+		width: 50%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	</style>
+{% endblock %}
 {% block content %}
-<script type="text/javascript" src="{% static 'js/delay.js' %}"></script>
-<!-- Trabajos -->
-	<div class="trabajos">   
-            {% for trabajo in trabajos %}
-            <div onclick="" class="col-md-4 col-sm-6 cont animated fadeInUp" id="trabajo{{forloop.counter}}">
-
-                <!-- Retrazar animacion de cada elemento -->
-                <script>delayAnimation({{forloop.counter}});</script>
-
-				<div class="img shadow img-responsive" style="background-image: url('{% static '' %}img/{{trabajo.abreviacion}}-app.jpg');"></div>
-					<div class="overlay">
-						<div class="text">
-							{{trabajo.nombre}}<br>
-							<br>
-				        <a class="btn btn-primary btn-md" href="{{trabajo.id}}">Ver Mas</a>
-			        </div>
-				</div>
+<!-- Works -->
+            <div id="work" class="">
+				<ul>
+                <!-- For loop -->
+                    {% for trabajo in trabajos %}
+                    <li id="trabajo{{forloop.counter}}"><a class="work" href="{{trabajo.abreviacion}}" data-color="#{{trabajo.color}}">{{trabajo.nombre}}</a></li>
+                    {% endfor%}
+				</ul>
 			</div>
-            {% endfor %}
-	</div>
-
+{% endblock %}
+{% block scriptsEnd %}
+<script>
+    var body = $('body');		
+    var tmp = 'nulo';
+	$('.work').mouseover(function(e) {
+	    e.preventDefault();
+        var color = this.getAttribute('data-color');
+        body.css("background-color", color);
+    });
+</script>
 {% endblock %}
     
