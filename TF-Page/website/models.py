@@ -9,7 +9,7 @@ class Info_pagina(models.Model):
 	facebook = models.CharField(max_length=30)
 	telefono = models.CharField(max_length=8)
 	email = models.EmailField(max_length=35)
-	home_desc = models.TextField()
+	home_desc = RichTextField()
 	habilidades_desc = models.TextField()
 	trabajos_desc = models.TextField()
 

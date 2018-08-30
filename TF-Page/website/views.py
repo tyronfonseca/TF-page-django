@@ -4,11 +4,11 @@ from django.views.generic import TemplateView, DetailView
 from website.models import Info_pagina, Trabajos, Habilidades
 from api.models import Gender
 
-class QuienView(TemplateView):
-    template_name = "quien.html"
+class AboutView(TemplateView):
+    template_name = "about.html"
 
     def get_context_data(self, **kwargs):
-       context = super(QuienView, self).get_context_data(**kwargs)
+       context = super(AboutView, self).get_context_data(**kwargs)
 
        context['habilidad_web'] = Habilidades.objects.all().filter(tipo = 'web')
        context['habilidad_lan'] = Habilidades.objects.all().filter(tipo = 'lan')
@@ -20,11 +20,11 @@ class QuienView(TemplateView):
 
 
 
-class TrabajosView(TemplateView):
-    template_name = "trabajos.html"
+class WorksView(TemplateView):
+    template_name = "work.html"
 
     def get_context_data(self, **kwargs):
-        context = super(TrabajosView,self).get_context_data(**kwargs)
+        context = super(WorksView,self).get_context_data(**kwargs)
 
         context['page_data'] = Info_pagina.objects.first()
         context['trabajos'] = reversed(Trabajos.objects.all())
