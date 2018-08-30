@@ -1,24 +1,107 @@
 {% extends "base.html" %}
-{% block title %}Contacto{% endblock title %}
+{% load staticfiles %}
+{% block title %}Contact{% endblock title %}
+{% block styles %}
+<style>
+		@font-face {
+		    font-family: 'Neon';
+		    src: url({% static 'fonts/Clip.ttf' %});
+		}
+		.neon{
+			font-family: 'Neon';
+			font-weight: 300;
+			font-size: 3.2em;
+			text-align:center;
+			color: #fff;
+		}
+		.neon.primero{			
+		  text-shadow:
+		    0 0 10px #9d00ff,
+		    0 0 20px #9d00ff,
+		    0 0 30px #9d00ff,
+		    0 0 40px #9d00ff,
+		    0 0 50px #9d00ff,
+		    0 0 60px #9d00ff;
+		}
+		.neon.segundo{			
+		  text-shadow:
+		    0 0 10px #33ff00,
+		    0 0 20px #33ff00,
+		    0 0 30px #33ff00,
+		    0 0 40px #33ff00,
+		    0 0 50px #33ff00,
+		    0 0 60px #33ff00;
+		    -webkit-animation: pulso 5s infinite;
+		    -o-animation: pulso 5s infinite;
+		    animation: pulso 5s infinite;
+		}
+		span.flick{
+			font-family: 'Neon';
+			animation: flick 2s infinite;
+		}
+
+		@keyframes pulso{
+			0%{
+				text-shadow: 0px 0px 0px;
+				opacity: 0;
+			}
+			50%{
+				text-shadow:
+			    0 0 10px #33ff00,
+			    0 0 20px #33ff00,
+			    0 0 30px #33ff00,
+			    0 0 40px #33ff00,
+			    0 0 50px #33ff00,
+			    0 0 60px #33ff00;
+			    opacity: 1;
+			}
+			100%{
+				text-shadow: 0px 0px 0px;
+				opacity: 0;
+			}
+		}
+		@keyframes flick{
+			0%{opacity: 1;}
+			52%{opacity: 1;}
+			55%{opacity: 0;}
+			56%{opacity: 1;}
+			100%{opacity: 1;}
+		}
+        .icon {
+            font-size: 1.2em;
+            padding-right: 5px;
+        }
+        .icon i {
+            font-size: 2em;
+        }
+        a{
+        text-decoration:none; }
+	</style>
+{% endblock %}
+{% block scripts %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
+{% endblock %}
 {% block content %}
-<!-- Contacto -->
-<div class="row animated fadeIn">
-	<div class="contacto">
-		<h1>Contacto</h1>
-        <br>
-        <br>
-			<div class="col-md-3 col-xs-6">
-				<a href="https://twitter.com/{{page_data.twitter}}" target="_blank" class="icon"><i class="devicon-twitter-plain"></i><br><p>@{{page_data.twitter}}</p></a>
+<!-- Contact -->
+            <div id="contact" class="section">
+				<h1 class="neon primero">OPE<span class="flick">N</span></h1>
+				<h1 class="neon segundo">24/7</h1>
 			</div>
-			<div class="col-md-3 col-xs-6">
-				<a href="https://www.facebook.com/{{page_data.facebook}}" target="_blank" class="icon"><i class="devicon-facebook-plain"></i><br><p>/{{page_data.facebook}}</p></a>
-			</div>
-			<div class="col-md-3 col-xs-6">
-				<a href="tel://+506{{page_data.telefono}}" class="icon"><i class="large material-icons">stay_current_portrait</i><br><p>(+506) {{page_data.telefono}}</p></a>
-			</div>
-			<div class="col-md-3 col-xs-6">
-		    	<a href="mailto:{{page_data.email}}" class="icon"><i class="large material-icons">email</i><br><p>{{page_data.email}}</p></a>
-			</div>
-	</div>
-</div>
+            <div class="row"  style="text-align:center;padding-top:20px;">
+                
+			    <div class="col-4">
+		    	    <a href="mailto:{{page_data.email}}" class="icon"><i class="large material-icons">email</i><br><p>{{page_data.email}}</p></a>
+			    </div>
+                <div class="col-4">
+				    <a href="https://twitter.com/{{page_data.twitter}}" target="_blank" class="icon"><i class="devicon-twitter-plain"></i><br><p>@{{page_data.twitter}}</p></a>
+			    </div>
+			    <div class="col-4">
+				    <a href="https://www.facebook.com/{{page_data.facebook}}" target="_blank" class="icon"><i class="devicon-facebook-plain"></i><br><p>/{{page_data.facebook}}</p></a>
+			    </div>
+			    <div class="col-4">
+				    <a href="tel://+506{{page_data.telefono}}" class="icon"><i class="large material-icons">stay_current_portrait</i><br><p>(+506) {{page_data.telefono}}</p></a>
+			    </div>
+
+            </div>
 {% endblock %}

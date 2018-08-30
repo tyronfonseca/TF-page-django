@@ -1,33 +1,28 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block title %}Gender API (Beta){% endblock title %}
-{% block styles %}
+{% block styles %}   
     <link rel="stylesheet" href="{% static 'css/chart.css' %}">
 {% endblock %}
 {% block scripts %}
     <script src="{% static 'js/chart.js' %}"></script>
 {% endblock %}
 {% block content %}
+<div style="text-align:center">
 <!-- Gender API -->
-<div style="padding:16px;">
-    <div class="row">
-        <div style="width: 60%;">
             <form name="myform" action="" class="form" method="post"> {% csrf_token %}		
-		        <input type="text" name="name_param" id="name_param" class="form-control" placeholder="Ingresa el nombre a verificar">	         
-		        <button type="submit" class="btn btn-info" style="margin-top:15px;">Conseguir genero</button>
-            </form>
-        </div>
-        <br/>
-    </div>
-    <div class="row animated fadeIn">      
-        
+		        <input type="text" name="name_param" id="name_param" class="form-control" placeholder="Ingresa el nombre a verificar">
+                <br/>
+		        <button type="submit" class="btn" style="margin-top:15px;padding: 8px">Conseguir genero</button>
+            </form>                
+<br />    
         {% if data.count != 0 and data != 'empty'%}
             {% for datos in data %}
-            <div class="col-xs-6 col-md-12">
-                <h1 style="text-transform:capitalize"><b>{{datos.name|title}}</b></h1>
+            <div>
+                <h1 style="text-transform:capitalize;"><b>{{datos.name|title}}</b></h1><br/>
             </div>
-            <div class="col-md-4 col-xs-6">                
-                
+            <div class="row"> 
+            <div class="col-3">             
                 {% if datos.gender == 'f' %}
                     <img src="{% static ''%}img/female.png"/>
                     <h3><b>Femenino</b></h3>                    
@@ -36,13 +31,13 @@
                     <h3><b>Masculino</b></h3>  
                 {% endif %}       
             </div>
-            <div class="col-md-4 col-xs-6">               
-                <h3><b>{{datos.count}}</b></h3>
+            <div class="col-3">               
+                <h1><b>{{datos.count}}</b></h1>
                 <h4>recurrencias en la base de datos</h4>
             </div>   
-            <div class="col-md-4 col-xs-6">
+            <div class="col-3">
                 <script>chartAnimation('genero-chart', '{{datos.name}}','white', {{datos.percentage}});</script>                
-	            <ul class="chart" id="genero-chart">
+	            <ul class="chart" id="genero-chart" style="text-align:left">
 		            <li>
 			            <span>{{datos.percentage|floatformat}}%</span>			
 		            </li>
@@ -51,11 +46,11 @@
             </div>
             
             {% endfor %}
+            </div>  
         {% elif data != 'empty' %}
             <br/>
             <p>Error. Verifica los datos.</p> 
             <p>Puede que el nombre no exista en la base de datos.</p>
         {% endif %}
-    </div>
-</div>
+ </div>    
 {% endblock %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, redirect
 from django.template import RequestContext
 from django.views.generic import TemplateView, DetailView
 from website.models import Info_pagina, Trabajos, Habilidades
@@ -27,7 +27,7 @@ class TrabajosView(TemplateView):
         context = super(TrabajosView,self).get_context_data(**kwargs)
 
         context['page_data'] = Info_pagina.objects.first()
-        context['trabajos'] = Trabajos.objects.all()
+        context['trabajos'] = reversed(Trabajos.objects.all())
 
         return context
 
@@ -67,3 +67,21 @@ def handler500(request):
                                       context_instance=RequestContext(request))
         response.status_code = 500
         return response
+
+def WorkView(request,adv):
+	data = Trabajos.objects.filter(abreviacion=adv)
+	template = 'errorHandlers/404.html'
+	for d in data:
+		x = d.abreviacion
+		if x == 'fotw':
+			template = 'work_detail.html'
+		elif x == 'pda':
+			template = 'work_detail.html'
+		elif x == 'gender':
+			return redirect('/gender')
+		elif x == 'siscon':
+			return redirect('/siscon')
+		else:
+			print("Error")
+		data = d
+	return render(request,template,{'object': data})

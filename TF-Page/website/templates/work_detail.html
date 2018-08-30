@@ -3,26 +3,38 @@
 {% block title %}{{object.nombre}}{% endblock title %}
 {% block styles %}
     <link rel="stylesheet" href="{% static 'css/modal.css' %}"/>
+    <style>
+        body{
+            background-color:#{{object.color}};
+        }
+        ul {
+            padding-left: 15px;
+            padding:5px;
+            list-style: initial;
+        }
+    </style>
 {% endblock %}
 {% block content %}
 <!-- Detail Trabajo -->
 <div style="padding:16px;">
-<div class="row animated fadeIn">
-	<div class="col-md-4" >
-            
+<div class="row">
+	<div class="col-4" >            
         	<img class="img-responsive" src="{% static '' %}img/{{object.abreviacion}}-launcher.png" alt="" style="max-height:150px;padding-right: 15px;"/>
 	</div>
-    <div class="col-md-6">
-        <h1>{{object.nombre}}</h1>
+    <div class="col-2">
+        <p><h1>{{object.nombre}}</h1></p><br/>
         <p style="text-align:left;">{{object.descripcion|safe}}</p>
     </div>
 </div>
-<div class="row animated fadeIn" style="padding-top:20px;">
-        <div class="col-md-6">
+<br />
+<br/>
+<br />
+<div class="row">
+        <div class="col-2">
             <h2 style="text-align:left;">Caracteristicas</h2>
             {{object.funciones|safe}}
         </div>
-        <div class="col-md-6" style="margin-bottom:30px;">
+        <div class="col-2" style="margin-bottom:30px;">
             <img  class="shadow img-responsive img-trigger" src="{% static '' %}img/{{object.abreviacion}}-app.jpg" alt="{{object.nombre}}" style="width:100%;height:300px;object-fit:cover" onclick="displayModal(this);"/>
         </div>
         {% if object.tipo != 'app' %}

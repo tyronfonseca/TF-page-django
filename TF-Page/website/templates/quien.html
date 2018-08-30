@@ -1,71 +1,17 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% block title %}Quien Soy{% endblock title %}
+{% block title %}Welcome{% endblock title %}
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'css/ChartStyles.css' %}">
+   
 {% endblock %}
 {% block content %}
-<!-- Quien -->
-<div class="animated fadeIn" style="padding:16px;">   
-    <div class="row">
-        <div class="col-md-4">
-            <img src="{% static '' %}img/profile-pic.png" class="img-circle" width="150" height="150"/>
-            <h5><i>"Por el dia programo y por la noche combato el crimen."</i></h5>
-        </div>
-        <div class="quien col-md-8" style="text-align:left;">
-            <p>{{page_data.home_desc|safe}}</p>            
-            <a class="btn btn-primary btn-md" href="/proyectos">Ver proyectos</a>
-        </div>
-    </div>
-    <br/>
-    <hr style="width: 80%;">
-    <h3>Experiencia</h3>
-    <div class="row">
-        <div class="col-md-4">
-            <ul class="chart chart-app">
-                <li>
-                    <span>Android (Java)</span>
-                </li>
-                <li>
-                    <span>iOS (Swift 2)</span>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-            <ul class="chart chart-web">
-                <li>
-                    <span>Angular</span>
-                </li>
-                <li>
-                    <span>Django</span>
-                </li>
-                <li>
-                    <span>ASP.NET MVC</span>
-                </li>
-                <li>
-                    <span>PHP</span>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-            <ul class="chart chart-tools">
-                <li>
-                    <span>Photoshop</span>
-                </li>
-                <li>
-                    <span>Boostrap 3</span>
-                </li>
-                <li>
-                    <span>Git</span>
-                </li>
-                <li>
-                    <span>MySQL/SQLite</span>
-                </li>
-                <li>
-                    <span>Cocoapods</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<!-- About -->
+            <div id="about" class="section">
+				<div style="max-width: 750px;">
+					<h1 style="font-size:7em;font-weight:700">Hola!</h1>
+					<p style="font-size:1.6em;">Me llamo <strong>Tyron Fonseca</strong>. Diseno y desarrollo paginas web ademas de aplicaciones moviles.</p>
+					<br>
+					<p style="font-size:1.2em;">Soy un apasionado de la tecnologia al que un dia un amigo le dijo: "Mae aprenda android". Y aprendi, y de ahi empece a meterme en el mundillo de la programacion y el diseno web.</p>
+				</div>				
+			</div>
 {% endblock %}
