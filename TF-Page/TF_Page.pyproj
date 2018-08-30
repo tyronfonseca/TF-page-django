@@ -326,9 +326,9 @@
     <Content Include="website\templates\errorHandlers\500.html" />
     <Content Include="website\templates\gender.html" />
     <Content Include="website\templates\work_detail.html" />
-    <Content Include="website\templates\quien.html" />
+    <Content Include="website\templates\about.html" />
     <Content Include="website\templates\includes\SVG.html" />
-    <Content Include="website\templates\trabajos.html" />
+    <Content Include="website\templates\work.html" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.6" />

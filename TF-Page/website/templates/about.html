@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Welcome{% endblock title %}
+{% block styles %}
+   
+{% endblock %}
+{% block content %}
+<!-- About -->
+            <div id="about" class="section">
+				<div style="max-width: 750px;">
+					<h1 style="font-size:7em;font-weight:700">Hello!</h1>
+					{{page_data.home_desc|safe}}
+				</div>				
+			</div>
+<br/>            
+            <p>Hear this song :)</p>
+<br/>
+            <iframe width="50%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/133282244&color=%231e1f1b&auto_play=false&hide_related=false&show_comments=flase&show_user=false&show_reposts=false&show_teaser=flase"></iframe>
+{% endblock %}
